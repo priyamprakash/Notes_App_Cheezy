@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="72dp"
-            android:fontFamily="@font/sf_pro_display_regular"
+            android:fontFamily="@font/prompt_light"
             android:text="@string/txt_email"
             android:textColor="@color/black"
             android:textSize="12sp" />
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
             android:background="@android:color/transparent"
-            android:fontFamily="@font/sf_pro_display_semibold"
+            android:fontFamily="@font/prompt_light"
             android:hint="@string/txt_email_hint"
             android:inputType="textEmailAddress"
             android:textColor="@color/black"
@@ -63,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/sf_pro_display_regular"
+            android:fontFamily="@font/prompt_light"
             android:text="@string/txt_password"
             android:textColor="@color/black"
             android:textSize="12sp" />
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
             android:background="@android:color/transparent"
-            android:fontFamily="@font/sf_pro_display_semibold"
+            android:fontFamily="@font/prompt_light"
             android:hint="@string/txt_password_hint"
             android:inputType="textPassword"
             android:textColor="@color/black"
@@ -92,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/sf_pro_display_regular"
+            android:fontFamily="@font/prompt_light"
             android:text=""
             android:textColor="@color/highlight_text_color"
             android:textSize="12sp" />
@@ -104,7 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/sf_pro_display_bold"
+            android:fontFamily="@font/prompt_light"
             android:text="@string/txt_login"
             android:textAllCaps="true"
             android:textColor="@color/white"
@@ -116,7 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/sf_pro_display_semibold"
+            android:fontFamily="@font/prompt_light"
             android:text="@string/txt_no_account_signup"
             android:textSize="14sp" />
 
