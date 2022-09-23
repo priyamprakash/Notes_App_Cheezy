@@ -9,7 +9,7 @@ import com.priyam.notesapp.R
 
 
 class MainFragment : Fragment() {
-    
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
