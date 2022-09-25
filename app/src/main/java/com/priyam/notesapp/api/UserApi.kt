@@ -1,7 +1,7 @@
 package com.priyam.notesapp.api
 
-import com.priyam.notesapp.model.UserRequest
-import com.priyam.notesapp.model.UserResponse
+import com.priyam.notesapp.models.UserRequest
+import com.priyam.notesapp.models.UserResponse
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.POST

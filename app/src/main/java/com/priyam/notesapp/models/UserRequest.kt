@@ -1,4 +1,4 @@
-package com.priyam.notesapp.model
+package com.priyam.notesapp.models
 
 data class UserRequest(
     val email: String,
