@@ -63,6 +63,10 @@ class RegisterFragment : Fragment() {
         bindObservers()
     }
 
+    /**
+    Pair<Boolean, String> will be returned from validate Credentials. It returns true if credentials are valid or else it returns false.
+    The boolean value will then be passed to onViewCreated above
+     */
     private fun validateUserInput(): Pair<Boolean, String> {
         val emailAddress = binding.txtEmail.text.toString()
         val userName = binding.txtUsername.text.toString()
@@ -70,8 +74,11 @@ class RegisterFragment : Fragment() {
         return authViewModel.validateCredentials(emailAddress, userName, password, false)
     }
 
+
+
     private fun showValidationErrors(error: String) {
-        binding.txtError.text = String.format(resources.getString(R.string.txt_error_message, error))
+        binding.txtError.text =
+            String.format(resources.getString(R.string.txt_error_message, error))
     }
 
 
@@ -96,7 +103,7 @@ class RegisterFragment : Fragment() {
                 is NetworkResult.Error -> {
                     showValidationErrors(it.message.toString())
                 }
-                is NetworkResult.Loading ->{
+                is NetworkResult.Loading -> {
                     binding.progressBar.isVisible = true
                 }
             }

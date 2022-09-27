@@ -14,6 +14,7 @@ import javax.inject.Inject
 class UserRepository @Inject constructor(private val userAPI: UserAPI) {
 
     private val _userResponseLiveData = MutableLiveData<NetworkResult<UserResponse>>()
+
     val userResponseLiveData: LiveData<NetworkResult<UserResponse>>
         get() = _userResponseLiveData
 

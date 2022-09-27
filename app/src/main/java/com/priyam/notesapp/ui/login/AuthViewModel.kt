@@ -36,6 +36,7 @@ class AuthViewModel @Inject constructor(private val userRepository: UserReposito
                             isLogin: Boolean) : Pair<Boolean, String> {
 
         var result = Pair(true, "")
+
         if(TextUtils.isEmpty(emailAddress) || (!isLogin && TextUtils.isEmpty(userName)) || TextUtils.isEmpty(password)){
             result = Pair(false, "Please provide the credentials")
         }
