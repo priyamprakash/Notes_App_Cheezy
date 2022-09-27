@@ -16,3 +16,7 @@ interface UserAPI {
     suspend fun signin(@Body userRequest: UserRequest) : Response<UserResponse>
 
 }
+
+
+//MainActivity >> MainFragment >> Register Fragment >> AuthViewModel >> UserRepository >>  UserApi (signup)
+// MainActivity >> MainFragment >> Login Fragment >> AuthViewModel >> UserRepository >>  UserApi (signin)
