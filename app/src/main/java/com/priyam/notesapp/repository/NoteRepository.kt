@@ -50,7 +50,7 @@ class NoteRepository @Inject constructor(private val noteAPI: NoteAPI) {
     }
 
     private fun handleResponse(response: Response<NoteResponse>, message: String) {
-        if (response.isSuccessful && response.body() != null) {
+        if (response.isSuccessful && (response.body() != null)) {
             _statusLiveData.postValue(NetworkResult.Success(Pair(true, message)))
         } else {
             _statusLiveData.postValue(NetworkResult.Success(Pair(false, "Something went wrong")))
