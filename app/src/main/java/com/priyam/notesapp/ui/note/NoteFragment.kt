@@ -38,21 +38,21 @@ class NoteFragment : Fragment() {
         bindObservers()
     }
 
-    private fun bindObservers() {
-        noteViewModel.statusLiveData.observe(viewLifecycleOwner, androidx.lifecycle.Observer {
-            when (it) {
-                is NetworkResult.Success -> {
-                    findNavController().popBackStack()
-                }
-                is NetworkResult.Error -> {
-
-                }
-                is NetworkResult.Loading -> {
-
-                }
+    
+    private fun setInitialData() {
+        val jsonNote = arguments?.getString("note")
+        if (jsonNote != null) {
+            note = Gson().fromJson<NoteResponse>(jsonNote, NoteResponse::class.java)
+            note?.let {
+                binding.txtTitle.setText(it.title)
+                binding.txtDescription.setText(it.description)
             }
-        })
+        }
+        else{
+            binding.addEditText.text = resources.getString(R.string.add_note)
+        }
     }
+
 
     private fun bindHandlers() {
         binding.btnDelete.setOnClickListener {
@@ -72,19 +72,24 @@ class NoteFragment : Fragment() {
         }
     }
 
-    private fun setInitialData() {
-        val jsonNote = arguments?.getString("note")
-        if (jsonNote != null) {
-            note = Gson().fromJson<NoteResponse>(jsonNote, NoteResponse::class.java)
-            note?.let {
-                binding.txtTitle.setText(it.title)
-                binding.txtDescription.setText(it.description)
+
+    private fun bindObservers() {
+        noteViewModel.statusLiveData.observe(viewLifecycleOwner, androidx.lifecycle.Observer {
+            when (it) {
+                is NetworkResult.Success -> {
+                    findNavController().popBackStack()
+                }
+                is NetworkResult.Error -> {
+
+                }
+                is NetworkResult.Loading -> {
+
+                }
             }
-        }
-        else{
-            binding.addEditText.text = resources.getString(R.string.add_note)
-        }
+        })
     }
+
+
 
 
     override fun onDestroyView() {

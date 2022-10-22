@@ -62,7 +62,8 @@
             android:hint="@string/txt_title_hint"
             android:textColor="@color/black"
             android:textColorHint="@color/light_gray"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <View
             android:layout_width="match_parent"
@@ -114,6 +115,8 @@
             android:textAllCaps="true"
             android:textColor="@color/white"
             android:textSize="16sp" />
+
+
     </LinearLayout>
 
 
