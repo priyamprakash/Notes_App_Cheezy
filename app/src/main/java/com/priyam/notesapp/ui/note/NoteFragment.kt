@@ -38,7 +38,7 @@ class NoteFragment : Fragment() {
         bindObservers()
     }
 
-    
+
     private fun setInitialData() {
         val jsonNote = arguments?.getString("note")
         if (jsonNote != null) {
