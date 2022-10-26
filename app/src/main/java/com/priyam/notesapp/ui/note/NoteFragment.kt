@@ -17,7 +17,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class NoteFragment : Fragment() {
-//
+
     private var _binding: FragmentNoteBinding? = null
     private val binding get() = _binding!!
     private val noteViewModel by viewModels<NoteViewModel>()
