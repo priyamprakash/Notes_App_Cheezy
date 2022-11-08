@@ -44,6 +44,5 @@ class NetworkModule {
     fun providesNoteAPI(retrofitBuilder: Retrofit.Builder, okHttpClient: OkHttpClient): NoteAPI {
         return retrofitBuilder.client(okHttpClient).build().create(NoteAPI::class.java)
     }
-
-
+    
 }
