@@ -1,6 +1,7 @@
 package com.priyam.notesapp.ui.note
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -55,6 +56,7 @@ class MainFragment : Fragment() {
             when (it) {
                 is NetworkResult.Success -> {
                     adapter.submitList(it.data)
+                    Log.d("TAG", "bindObservers: ${it.data}")
                 }
                 is NetworkResult.Error -> {
                     Toast.makeText(requireContext(), it.message.toString(), Toast.LENGTH_SHORT)
@@ -65,6 +67,8 @@ class MainFragment : Fragment() {
                 }
             }
         })
+
+
     }
 
     private fun onNoteClicked(noteResponse: NoteResponse){

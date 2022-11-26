@@ -38,9 +38,9 @@ class RegisterFragment : Fragment() {
     ): View? {
 
         _binding = FragmentRegisterBinding.inflate(inflater, container, false)
-        if (tokenManager.getToken() != null) {
-            findNavController().navigate(R.id.action_registerFragment_to_mainFragment)
-        }
+//        if (tokenManager.getToken() != null) {
+//            findNavController().navigate(R.id.action_registerFragment_to_mainFragment)
+//        }
         return binding.root
 
     }

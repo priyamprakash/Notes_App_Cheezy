@@ -1,6 +1,7 @@
 package com.priyam.notesapp.ui.login
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +14,7 @@ import androidx.navigation.fragment.findNavController
 import com.priyam.notesapp.R
 import com.priyam.notesapp.databinding.FragmentLoginBinding
 import com.priyam.notesapp.models.UserRequest
+import com.priyam.notesapp.utils.Constants.TAG
 import com.priyam.notesapp.utils.Helper
 import com.priyam.notesapp.utils.NetworkResult
 import com.priyam.notesapp.utils.TokenManager
@@ -83,6 +85,7 @@ class LoginFragment : Fragment() {
             binding.progressBar.isVisible = false
             when (it) {
                 is NetworkResult.Success -> {
+                    Log.d(TAG, "bindObservers: success")
                     tokenManager.saveToken(it.data!!.token)
                     findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
                 }
